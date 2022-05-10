@@ -82,7 +82,8 @@ if ( !class_exists( 'ampanalyticssupportPlugin' ) ) {
 
 	$ampanalyticssupportPlugin = new ampanalyticssupportPlugin();
 	$ampanalyticssupportPlugin->register();
-    $ampanalyticssupportPlugin->insert();
+   ;
+	add_action('the_content',  $ampanalyticssupportPlugin->insert());
 
 	// activation
 	register_activation_hook( __FILE__, array( $ampanalyticssupportPlugin, 'activate' ) );
