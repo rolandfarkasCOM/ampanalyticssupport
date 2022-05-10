@@ -1,11 +1,9 @@
 # GA4-AMP-SUPPORT-WP-PLUGIN README #
 [![LICENSE](https://img.shields.io/github/license/polarizeltd/mcms-lite?logo=github&style=for-the-badge)](https://github.com/polarizeltd/mcms-lite/blob/master/LICENSE)
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![AMP](https://img.shields.io/badge/Amp-000?style=for-the-badge&logo=amp&logoColor=005AF0)
 
-### About ###### About ###
+### About ###
 Google Analytics 4 (GA4) AMP support WordPress plugin.
 
 ### Contributing ###
