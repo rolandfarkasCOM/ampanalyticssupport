@@ -10,7 +10,7 @@
 
     
 // Check if the request is amp and if the amp plugin is activve and insert analytics if required.
-   public function ampanalyticssupport() {
+  function ampanalyticssupport() {
 
     include_once ABSPATH . 'wp-admin/includes/plugin.php';
  
