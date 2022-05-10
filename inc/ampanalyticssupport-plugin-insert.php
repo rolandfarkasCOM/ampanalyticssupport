@@ -10,7 +10,7 @@
  // AMP request checker
 class ampanalyticssupportInsert
 {
-	function page_is_amp() {
+	public function page_is_amp() {
         if ( function_exists( 'amp_is_request' ) ):
           return amp_is_request();
         else :
@@ -19,7 +19,7 @@ class ampanalyticssupportInsert
       }
     
 // Check if the request is amp and if the amp plugin is activve and insert analytics if required.
-   function ampanalyticssupport() {
+   public function ampanalyticssupport() {
 
     include_once ABSPATH . 'wp-admin/includes/plugin.php';
 
