@@ -87,10 +87,6 @@ if ( !class_exists( 'ampanalyticssupportPlugin' ) ) {
 	// activation
 	register_activation_hook( __FILE__, array( $ampanalyticssupportPlugin, 'activate' ) );
 
-	// deactivation
-	//require_once plugin_dir_path( __FILE__ ) . 'inc/ampanalyticssupport-plugin-deactivate.php';
-	//register_deactivation_hook( __FILE__, array( 'ampanalyticssupportPluginDeactivate', 'deactivate' ) );
-
     register_setting( 'ampanalyticssupport-settings', 'ampanalyticssupport' );
 }
 
