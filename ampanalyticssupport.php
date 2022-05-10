@@ -35,8 +35,8 @@ if ( !class_exists( 'ampanalyticssupportPlugin' ) ) {
 		function register() {
 			add_filter( "plugin_action_links_$this->plugin", array( $this, 'settings_link' ) );
             add_action( 'admin_menu', array( $this, 'add_admin_pages' ) );
-          
-		}
+			add_action( 'wp_body_open','ampanalyticssupport');
+			}
         
 
 		public function settings_link( $links ) {
@@ -84,7 +84,6 @@ if ( !class_exists( 'ampanalyticssupportPlugin' ) ) {
 
 	$ampanalyticssupportPlugin = new ampanalyticssupportPlugin();
 	$ampanalyticssupportPlugin->register();
-	$ampanalyticssupportPlugin->insert();
    
 
 
