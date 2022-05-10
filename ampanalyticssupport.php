@@ -88,7 +88,7 @@ if ( !class_exists( 'ampanalyticssupportPlugin' ) ) {
 
 
 // Check if the request is amp and if the amp plugin is activve and insert analytics if required.
-function ampanalyticssupport($classes) {
+function ampanalyticssupport() {
 
     include_once ABSPATH . 'wp-admin/includes/plugin.php';
  
