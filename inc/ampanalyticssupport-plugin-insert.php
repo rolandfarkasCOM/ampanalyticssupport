@@ -46,5 +46,5 @@ class ampanalyticssupportInsert
     }
          
   }
-  add_action( 'get_footer', 'ampanalyticssupport');
+  
 }
