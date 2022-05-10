@@ -79,8 +79,6 @@ if ( !class_exists( 'ampanalyticssupportPlugin' ) ) {
 	$ampanalyticssupportPlugin = new ampanalyticssupportPlugin();
 	$ampanalyticssupportPlugin->register();
    
-	require_once plugin_dir_path( __FILE__ ) . 'inc/ampanalyticssupport-plugin-insert.php';		
-
 	// activation
 	register_activation_hook( __FILE__, array( $ampanalyticssupportPlugin, 'activate' ) );
 
