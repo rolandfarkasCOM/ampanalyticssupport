@@ -47,10 +47,7 @@ class ampanalyticssupportInsert
           }
       } 
     }
-    add_action('get_footer', 'ampanalyticssupport');
-         
-   
-
-
 }
+
+add_action('get_footer', 'ampanalyticssupport');
  
