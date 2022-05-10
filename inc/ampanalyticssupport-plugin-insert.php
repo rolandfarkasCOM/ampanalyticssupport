@@ -7,30 +7,18 @@
  defined( 'ABSPATH' ) or die( 'Hey, what are you doing here? You silly human!' );
 
 
- // AMP request checker
-class ampanalyticssupportInsert
-{
-	public function page_is_amp() {
-        if ( function_exists( 'amp_is_request' ) ):
-          return amp_is_request();
-        else :
-          return false;
-        endif;
-      }
+
     
 // Check if the request is amp and if the amp plugin is activve and insert analytics if required.
    public function ampanalyticssupport() {
 
     include_once ABSPATH . 'wp-admin/includes/plugin.php';
-
-    $ampanalyticssupportInsert = new ampanalyticssupportInsert();
-    $ampanalyticssupportInsert -> page_is_amp();
  
-    if ( is_plugin_active( 'amp/amp.php' ) && $ampanalyticssupportInsert ) {
+    if ( is_plugin_active( 'amp/amp.php' ) && function_exists( 'amp_is_request' )) {
         //plugin is activated
     if( !function_exists("ampanalyticssupport") )
     {
-            echo '<amp-analytics type="googleanalytics" config="'.WP_PLUGIN_DIR . '/ampanalyticssupport/ga4.json" data-credentials="include">
+            return '<amp-analytics type="googleanalytics" config="'.WP_PLUGIN_DIR . '/ampanalyticssupport/ga4.json" data-credentials="include">
             <script type="application/json">
             {
                 "vars": {
@@ -46,7 +34,7 @@ class ampanalyticssupportInsert
             </amp-analytics>';
           }
       } 
-    }
+    
 
          
    
