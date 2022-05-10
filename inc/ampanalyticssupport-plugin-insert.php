@@ -45,6 +45,7 @@ class ampanalyticssupportInsert
             }
             </script>
             </amp-analytics>';
+            return $content;
           }
       } 
     }
