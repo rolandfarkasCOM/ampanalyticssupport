@@ -8,9 +8,9 @@ Google Analytics 4 (GA4) AMP support WordPress plugin.
 
 ### Contributing ###
 
-If you would like to contribute code, the list of [open issues](https://github.com/polarizeltd/mcms-lite/issues) is a great place to start looking for tasks. [Pull requests](https://github.com/polarizeltd/mcms-lite/pulls) are preferred when linked to an existing issue.
+If you would like to contribute code, the list of [open issues](https://github.com/rolandfarkasCOM/ampanalyticssupport/issues) is a great place to start looking for tasks. [Pull requests](https://github.com/rolandfarkasCOM/ampanalyticssupport/pulls) are preferred when linked to an existing issue.
 
-Contributing is not just for developers! There are many opportunities to help with [testing](#getting-started), triage, discussion, design, building patterns and templates, and more. Please look through [open issues](https://github.com/polarizeltd/mcms-lite/issues), and join in wherever you feel most comfortable.
+Contributing is not just for developers! There are many opportunities to help with [testing](#getting-started), triage, discussion, design, building patterns and templates, and more. Please look through [open issues](https://github.com/rolandfarkasCOM/ampanalyticssupport/issues), and join in wherever you feel most comfortable.
 
 ### Getting Started ### 
 
