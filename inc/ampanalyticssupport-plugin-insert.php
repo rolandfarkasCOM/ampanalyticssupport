@@ -29,7 +29,7 @@ class ampanalyticssupportInsert
         //plugin is activated
     if( !function_exists("ampanalyticssupport") )
     {
-            $content = $content.'<amp-analytics type="googleanalytics" config="'.WP_PLUGIN_DIR . '/ampanalyticssupport/ga4.json" data-credentials="include">
+            return $content.'<amp-analytics type="googleanalytics" config="'.WP_PLUGIN_DIR . '/ampanalyticssupport/ga4.json" data-credentials="include">
             <script type="application/json">
             {
                 "vars": {
@@ -43,11 +43,11 @@ class ampanalyticssupportInsert
             }
             </script>
             </amp-analytics>';
-            return $content;
+            
           }
       } 
     }
   }
          
-  
+  add_action('the_content', 'ampanalyticssupport');
  
