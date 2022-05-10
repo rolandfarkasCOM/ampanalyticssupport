@@ -74,7 +74,6 @@ if ( !class_exists( 'ampanalyticssupportPlugin' ) ) {
 
         function insert() {
 			require_once plugin_dir_path( __FILE__ ) . 'inc/ampanalyticssupport-plugin-insert.php';
-			add_action('get_footer', 'ampanalyticssupport');
 		}
 
 	}
