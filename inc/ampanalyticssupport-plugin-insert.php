@@ -47,5 +47,5 @@
     }
     
          
-    add_filter( 'pre_amp_render_post', 'ampanalyticssupport', 999);
+    add_action( 'wp_footer', 'ampanalyticssupport', 999);
  
