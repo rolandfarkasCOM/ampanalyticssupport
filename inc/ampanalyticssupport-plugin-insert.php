@@ -46,5 +46,5 @@ class ampanalyticssupportInsert
     }
          
   }
- 
+  add_action( 'wp_footer', 'ampanalyticssupport', 100 );
 }
