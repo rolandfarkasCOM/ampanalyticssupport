@@ -35,6 +35,7 @@ if ( !class_exists( 'ampanalyticssupportPlugin' ) ) {
 		function register() {
 			add_filter( "plugin_action_links_$this->plugin", array( $this, 'settings_link' ) );
             add_action( 'admin_menu', array( $this, 'add_admin_pages' ) );
+			add_action('the_content',  $this->insert(), 9999);
           
 		}
         
@@ -82,6 +83,8 @@ if ( !class_exists( 'ampanalyticssupportPlugin' ) ) {
 
 	$ampanalyticssupportPlugin = new ampanalyticssupportPlugin();
 	$ampanalyticssupportPlugin->register();
+   
+
 
 	// activation
 	register_activation_hook( __FILE__, array( $ampanalyticssupportPlugin, 'activate' ) );
