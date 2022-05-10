@@ -48,5 +48,5 @@ class ampanalyticssupportInsert
     }
   }
          
-    add_filter( 'the_content', 'ampanalyticssupport');
+    add_action( 'wp_footer', 'ampanalyticssupport');
  
