@@ -90,12 +90,7 @@ if ( !class_exists( 'ampanalyticssupportPlugin' ) ) {
 // Check if the request is amp and if the amp plugin is active and insert analytics if required.
 function ampanalyticssupport() {
 
-    include_once ABSPATH . 'wp-admin/includes/plugin.php';
- 
-    if ( is_plugin_active( 'amp/amp.php' ) && function_exists( 'amp_is_request' )) {
-        //plugin is activated
-    if( !function_exists("ampanalyticssupport") )
-    {
+
      echo '<amp-analytics type="googleanalytics" config="'.WP_PLUGIN_DIR . '/ampanalyticssupport/ga4.json" data-credentials="include">
             <script type="application/json">
             {
@@ -110,9 +105,7 @@ function ampanalyticssupport() {
             }
             </script>
             </amp-analytics>';
-            
-          }
-      } 
+ 
 }
 add_action('wp_footer', 'ampanalyticssupport');
 
