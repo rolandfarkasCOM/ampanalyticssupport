@@ -68,12 +68,14 @@ if ( !class_exists( 'ampanalyticssupportPlugin' ) ) {
 
 		function activate() {
 			require_once plugin_dir_path( __FILE__ ) . 'inc/ampanalyticssupport-plugin-activate.php';
-            ampanalyticssupportActivate::activate();
+			$ampanalyticssupportActivate = new ampanalyticssupportActivate();
+			$ampanalyticssupportActivate->activate();
 		}
 
         function insert() {
 			require_once plugin_dir_path( __FILE__ ) . 'inc/ampanalyticssupport-plugin-insert.php';
-            ampanalyticssupportInsert::ampanalyticssupport();
+			$ampanalyticssupportInsert = new ampanalyticssupportInsert();
+			$ampanalyticssupportInsert->ampanalyticssupport();
 		}
 
 	}
