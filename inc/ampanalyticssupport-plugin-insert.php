@@ -8,8 +8,7 @@
 
 
  // AMP request checker
-class ampanalyticssupportInsert
-{
+
 	function page_is_amp() {
         if ( function_exists( 'amp_is_request' ) ):
           return amp_is_request();
@@ -22,10 +21,9 @@ class ampanalyticssupportInsert
    function ampanalyticssupport() {
     include_once ABSPATH . 'wp-admin/includes/plugin.php';
 
-    $ampanalyticssupportInsert = new ampanalyticssupportInsert();
-    $ampanalyticssupportInsert -> page_is_amp();
  
-    if ( is_plugin_active( 'amp/amp.php' ) && $ampanalyticssupportInsert ) {
+ 
+    if ( is_plugin_active( 'amp/amp.php' ) && page_is_amp() ) {
         //plugin is activated
     if( !function_exists("ampanalyticssupport") )
     {
