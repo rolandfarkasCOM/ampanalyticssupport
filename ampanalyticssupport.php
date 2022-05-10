@@ -35,8 +35,6 @@ if ( !class_exists( 'ampanalyticssupportPlugin' ) ) {
 		function register() {
 			add_filter( "plugin_action_links_$this->plugin", array( $this, 'settings_link' ) );
             add_action( 'admin_menu', array( $this, 'add_admin_pages' ) );
-			add_action('pre_amp_render_post',  $this->insert(), 9999);
-          
 		}
         
 
