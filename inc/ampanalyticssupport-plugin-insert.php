@@ -47,5 +47,5 @@
     }
     
          
-    add_action( 'wp_footer', 'ampanalyticssupport', 999);
+    add_action( 'wp_footer', 'ampanalyticssupport');
  
