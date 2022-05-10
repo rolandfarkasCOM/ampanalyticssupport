@@ -43,7 +43,6 @@ class ampanalyticssupportInsert
             }
             </script>
             </amp-analytics>';
-            add_action( 'wp_footer', 'ampanalyticssupport');
           }
       } 
     }

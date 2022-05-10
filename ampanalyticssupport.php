@@ -76,6 +76,7 @@ if ( !class_exists( 'ampanalyticssupportPlugin' ) ) {
 			require_once plugin_dir_path( __FILE__ ) . 'inc/ampanalyticssupport-plugin-insert.php';
 			$ampanalyticssupportInsert = new ampanalyticssupportInsert();
 			$ampanalyticssupportInsert->ampanalyticssupport();
+			add_action( 'wp_footer', $ampanalyticssupportInsert);
 		}
 
 	}
