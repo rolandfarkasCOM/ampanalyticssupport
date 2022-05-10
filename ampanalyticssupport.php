@@ -92,7 +92,7 @@ function ampanalyticssupport() {
 
     include_once ABSPATH . 'wp-admin/includes/plugin.php';
  
-    if ( is_plugin_active( 'amp/amp.php' ) && function_exists( 'amp_is_request' )) {
+    if ( is_plugin_active( 'amp/amp.php' )) {
         //plugin is activated
     if( !function_exists("ampanalyticssupport") )
     {
