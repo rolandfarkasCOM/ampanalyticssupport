@@ -45,14 +45,13 @@ class ampanalyticssupportInsert
 
               return $content;
               add_filter('the_content', 'add_post_content');
-          }
+        
           
         
           
       } 
     }
          
-   
-
+  }
 
 }
