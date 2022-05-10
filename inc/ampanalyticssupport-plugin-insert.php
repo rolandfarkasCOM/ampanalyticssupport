@@ -19,9 +19,8 @@ class ampanalyticssupportInsert
       }
     
 // Check if the request is amp and if the amp plugin is activve and insert analytics if required.
-   function ampanalyticssupport() {
+   function ampanalyticssupport($content) {
 
-    GLOBAL $content;
     include_once ABSPATH . 'wp-admin/includes/plugin.php';
 
     $ampanalyticssupportInsert = new ampanalyticssupportInsert();
