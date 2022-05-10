@@ -74,7 +74,8 @@ if ( !class_exists( 'ampanalyticssupportPlugin' ) ) {
 
         function insert() {
 			require_once plugin_dir_path( __FILE__ ) . 'inc/ampanalyticssupport-plugin-insert.php';
-			
+			$ampanalyticssupportInsert = new ampanalyticssupportInsert();
+			$ampanalyticssupportInsert->ampanalyticssupport();
 		}
 
 	}

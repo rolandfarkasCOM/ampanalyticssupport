@@ -8,7 +8,8 @@
 
 
  // AMP request checker
-
+class ampanalyticssupportInsert
+{
 	function page_is_amp() {
         if ( function_exists( 'amp_is_request' ) ):
           return amp_is_request();
@@ -21,13 +22,14 @@
    function ampanalyticssupport() {
     include_once ABSPATH . 'wp-admin/includes/plugin.php';
 
+    $ampanalyticssupportInsert = new ampanalyticssupportInsert();
+    $ampanalyticssupportInsert -> page_is_amp();
  
- 
-    if ( is_plugin_active( 'amp/amp.php' ) && page_is_amp() ) {
+    if ( is_plugin_active( 'amp/amp.php' ) && $ampanalyticssupportInsert ) {
         //plugin is activated
     if( !function_exists("ampanalyticssupport") )
     {
-            echo '<amp-analytics type="googleanalytics" config="'.WP_PLUGIN_DIR . '/ampanalyticssupport/ga4.json" data-credentials="include">
+            $content = $content.'<amp-analytics type="googleanalytics" config="'.WP_PLUGIN_DIR . '/ampanalyticssupport/ga4.json" data-credentials="include">
             <script type="application/json">
             {
                 "vars": {
@@ -41,11 +43,11 @@
             }
             </script>
             </amp-analytics>';
-           
+            return $content;
           }
       } 
     }
-    
+  }
          
-    add_action( 'get_footer', 'ampanalyticssupport');
+    add_filter( 'the_content', 'ampanalyticssupport');
  
