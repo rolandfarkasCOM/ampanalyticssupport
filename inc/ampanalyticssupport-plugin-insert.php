@@ -19,7 +19,7 @@ class ampanalyticssupportInsert
       }
     
 // Check if the request is amp and if the amp plugin is activve and insert analytics if required.
-   function ampanalyticssupportRender() {
+   function ampanalyticssupport() {
     include_once ABSPATH . 'wp-admin/includes/plugin.php';
 
     $ampanalyticssupportInsert = new ampanalyticssupportInsert();
@@ -27,9 +27,9 @@ class ampanalyticssupportInsert
  
     if ( is_plugin_active( 'amp/amp.php' ) && $ampanalyticssupportInsert ) {
         //plugin is activated
-    if( !function_exists("ampanalyticssupportRender") )
+    if( !function_exists("ampanalyticssupport") )
     {
-            echo '<amp-analytics type="googleanalytics" config="'.WP_PLUGIN_DIR . '/ampanalyticssupport/ga4.json" data-credentials="include">
+            return '<amp-analytics type="googleanalytics" config="'.WP_PLUGIN_DIR . '/ampanalyticssupport/ga4.json" data-credentials="include">
             <script type="application/json">
             {
                 "vars": {
@@ -46,7 +46,7 @@ class ampanalyticssupportInsert
           }
       } 
     }
-    add_action('wp_footer', 'ampanalyticssupportRender');
+    add_action('wp_footer', 'ampanalyticssupport');
          
    
 
