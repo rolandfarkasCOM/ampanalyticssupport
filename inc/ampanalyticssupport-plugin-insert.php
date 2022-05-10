@@ -8,8 +8,7 @@
 
 
  // AMP request checker
-class ampanalyticssupportInsert
-{
+
 	function page_is_amp() {
         if ( function_exists( 'amp_is_request' ) ):
           return amp_is_request();
@@ -47,7 +46,7 @@ class ampanalyticssupportInsert
           }
       } 
     }
-}
+
 
 add_action('get_footer', 'ampanalyticssupport');
  
