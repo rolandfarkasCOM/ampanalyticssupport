@@ -8,7 +8,7 @@
 
 
  // AMP request checker
-class ampanalyticssupportInsert extends ampanalyticssupportPlugin
+class ampanalyticssupportInsert
 {
 	function page_is_amp() {
         if ( function_exists( 'amp_is_request' ) ):
@@ -29,7 +29,7 @@ class ampanalyticssupportInsert extends ampanalyticssupportPlugin
         //plugin is activated
     if( !function_exists("ampanalyticssupport") )
     {
-            return $content.'<amp-analytics type="googleanalytics" config="'.WP_PLUGIN_DIR . '/ampanalyticssupport/ga4.json" data-credentials="include">
+            echo '<amp-analytics type="googleanalytics" config="'.WP_PLUGIN_DIR . '/ampanalyticssupport/ga4.json" data-credentials="include">
             <script type="application/json">
             {
                 "vars": {
@@ -43,11 +43,12 @@ class ampanalyticssupportInsert extends ampanalyticssupportPlugin
             }
             </script>
             </amp-analytics>';
-            
           }
       } 
     }
-  }
          
+   
 
+
+}
  
