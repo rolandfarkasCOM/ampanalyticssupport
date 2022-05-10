@@ -49,5 +49,5 @@ class ampanalyticssupportInsert extends ampanalyticssupportPlugin
     }
   }
          
-  add_action('the_content', 'ampanalyticssupport');
+
  
