@@ -26,25 +26,7 @@ class ampanalyticssupportInsert
         //plugin is activated
     if( !function_exists("ampanalyticssupport") )
     {
-                  $content = '<amp-analytics type="googleanalytics" config="'. WP_PLUGIN_DIR .'/ampanalyticssupport/ga4.json" data-credentials="include">
-                  <script type="application/json">
-                  {
-                      "vars": {
-                                  "GA4_MEASUREMENT_ID": "'.get_option('ampanalyticssupport').'",
-                                  "GA4_ENDPOINT_HOSTNAME": "www.google-analytics.com",
-                                  "DEFAULT_PAGEVIEW_ENABLED": true,    
-                                  "GOOGLE_CONSENT_ENABLED": false,
-                                  "WEBVITALS_TRACKING": false,
-                                  "PERFORMANCE_TIMING_TRACKING": false
-                      }
-                  }
-                  </script>
-                  </amp-analytics>'.$content;
-          
-
-              return $content;
-             
-        
+            
           
         
           
@@ -52,6 +34,6 @@ class ampanalyticssupportInsert
     }
          
   }
-  add_action( 'wp_footer', 'ampanalyticssupport', 100 );
+  
 
 }
