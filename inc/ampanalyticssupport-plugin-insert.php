@@ -26,7 +26,6 @@ class ampanalyticssupportInsert
         //plugin is activated
     if( !function_exists("ampanalyticssupport") )
     {
-
                   $content = '<amp-analytics type="googleanalytics" config="'. WP_PLUGIN_DIR .'/ampanalyticssupport/ga4.json" data-credentials="include">
                   <script type="application/json">
                   {
@@ -44,7 +43,7 @@ class ampanalyticssupportInsert
           
 
               return $content;
-              add_filter('the_content', 'add_post_content');
+             
         
           
         
@@ -53,5 +52,6 @@ class ampanalyticssupportInsert
     }
          
   }
+  add_action( 'wp_footer', 'ampanalyticssupport', 100 );
 
 }
