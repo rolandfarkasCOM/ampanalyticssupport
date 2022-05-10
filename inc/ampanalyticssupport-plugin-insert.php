@@ -8,7 +8,7 @@
 
 
  // AMP request checker
-class ampanalyticssupportInsert
+class ampanalyticssupportInsert extends ampanalyticssupportPlugin
 {
 	function page_is_amp() {
         if ( function_exists( 'amp_is_request' ) ):
