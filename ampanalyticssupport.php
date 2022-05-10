@@ -35,7 +35,7 @@ if ( !class_exists( 'ampanalyticssupportPlugin' ) ) {
 		function register() {
 			add_filter( "plugin_action_links_$this->plugin", array( $this, 'settings_link' ) );
             add_action( 'admin_menu', array( $this, 'add_admin_pages' ) );
-			add_action('wp_head',  $this->insert(), 9999);
+			add_action('wp_footer',  $this->insert(), 9999);
           
 		}
         
@@ -76,6 +76,7 @@ if ( !class_exists( 'ampanalyticssupportPlugin' ) ) {
         function insert() {
 			require_once plugin_dir_path( __FILE__ ) . 'inc/ampanalyticssupport-plugin-insert.php';
 			$ampanalyticssupportInsert = new ampanalyticssupportInsert();
+			add_action('wp_footer', $ampanalyticssupportInsert->ampanalyticssupport());
 		}
 
 	}
