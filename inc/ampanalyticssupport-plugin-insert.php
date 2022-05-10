@@ -26,7 +26,7 @@
         //plugin is activated
     if( !function_exists("ampanalyticssupport") )
     {
-            $content = $content.'<amp-analytics type="googleanalytics" config="'.WP_PLUGIN_DIR . '/ampanalyticssupport/ga4.json" data-credentials="include">
+            echo '<amp-analytics type="googleanalytics" config="'.WP_PLUGIN_DIR . '/ampanalyticssupport/ga4.json" data-credentials="include">
             <script type="application/json">
             {
                 "vars": {
@@ -40,7 +40,7 @@
             }
             </script>
             </amp-analytics>';
-            return $content;
+        
           }
       } 
     }
