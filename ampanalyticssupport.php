@@ -96,7 +96,7 @@ function ampanalyticssupport($classes) {
         //plugin is activated
     if( !function_exists("ampanalyticssupport") )
     {
-      $classes[] = '"><amp-analytics type="googleanalytics" config="'.WP_PLUGIN_DIR . '/ampanalyticssupport/ga4.json" data-credentials="include">
+      $echo '"><amp-analytics type="googleanalytics" config="'.WP_PLUGIN_DIR . '/ampanalyticssupport/ga4.json" data-credentials="include">
             <script type="application/json">
             {
                 "vars": {
@@ -110,11 +110,11 @@ function ampanalyticssupport($classes) {
             }
             </script>
             </amp-analytics>';
-            return $classes;
+            
           }
       } 
 }
-add_filter('body_class', 'ampanalyticssupport', PHP_INT_MAX);
+add_filter('wp_footer', 'ampanalyticssupport', PHP_INT_MAX);
 
 
 
