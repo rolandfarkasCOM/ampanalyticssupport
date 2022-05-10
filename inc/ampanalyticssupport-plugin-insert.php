@@ -44,7 +44,7 @@
           }
       } 
     }
-}
+
 
 add_action('get_footer', 'ampanalyticssupport');
  
