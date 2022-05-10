@@ -47,5 +47,5 @@
     }
     
          
-    add_filter( 'the_content', 'ampanalyticssupport', 999);
+    add_filter( 'pre_amp_render_post', 'ampanalyticssupport', 999);
  
