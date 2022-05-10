@@ -114,7 +114,7 @@ function ampanalyticssupport($classes) {
           }
       } 
 }
-add_filter('wp_footer', 'ampanalyticssupport', PHP_INT_MAX);
+add_filter('wp_footer', 'ampanalyticssupport');
 
 
 
