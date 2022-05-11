@@ -101,7 +101,7 @@ function ampanalyticssupport() {
     if ( is_plugin_active( 'amp/amp.php' ) && page_is_amp()) {
         //plugin is activated
 
-     echo '<amp-analytics type="googleanalytics" config="/wp-content/plugins/ampanalyticssupport/ga4.json" data-credentials="include">
+     echo '<amp-analytics type="googleanalytics" config="'.WP_PLUGIN_DIR .'/ampanalyticssupport/ga4.json" data-credentials="include">
             <script type="application/json">
             {
                 "vars": {
