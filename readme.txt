@@ -1,4 +1,4 @@
-=== Your Plugin Name ===
+=== AMP Google Analytics 4 Support ===
 Contributors: Roland Farkas
 Tags: ga4, google analytics 4, amp, ga4 amp, google analytics 4 amp support, ga4 amp support
 Requires at least: 4.9
@@ -13,6 +13,8 @@ A WordPress plugin to add GA4 Support to AMP pages.
  
 This is a simple plugin to add GA4 support to AMP and insert GA4 tags into your AMP WordPress pages or posts.
  
+= AMP Google Analytics 4 Support Plugin Audience: Everyone =
+
 == Installation ==
  
 1. Upload the plugin folder to your /wp-content/plugins/ folder or download the plugin using the plugin installer.
