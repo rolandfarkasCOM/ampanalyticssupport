@@ -3,7 +3,7 @@ Contributors: Roland Farkas
 Tags: ga4, google analytics 4, amp, ga4 amp, google analytics 4 amp support, ga4 amp support
 Requires at least: 4.9
 Tested up to: 5.9
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Requires PHP: 5.6
@@ -13,8 +13,10 @@ A WordPress plugin to add GA4 - Google Analytics 4 Support to AMP - Accelerated 
 == Description ==
  
 This is a simple plugin to add GA4 support to AMP and insert GA4 tags into your AMP WordPress pages or posts.
+
+= Description =
  
-= Requires the AMP plugin. =
+This is a simple plugin to add GA4 support to AMP and insert GA4 tags into your AMP WordPress pages or posts.
 
 = Credits =
 
@@ -48,4 +50,5 @@ Simply deactivate and delete the plugin.
 * Corrected a file name. 
 = 1.0.2 =
 * Updated deactivate and insert
-
+= 1.0.7 =
+* Updated Plugin Directory
