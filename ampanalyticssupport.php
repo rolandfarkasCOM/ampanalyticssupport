@@ -3,7 +3,7 @@
 * Plugin Name: AMP Google Analytics 4 Support
 * Plugin URI: https://github.com/rolandfarkasCOM/ampanalyticssupport/
 * Description: Google Analytics 4 (GA4) AMP support plugin.
-* Version: 1.0.8
+* Version: 1.0.9
 * Author: Roland Farkas
 * Author URI: https://rolandfarkas.com
 * License GPLv3 or later
@@ -25,7 +25,6 @@ if ( !class_exists( 'ampanalyticssupportPlugin' ) ) {
 	class ampanalyticssupportPlugin
 	{
 
-
 		public $plugin;
 
 		function __construct() {
@@ -34,34 +33,33 @@ if ( !class_exists( 'ampanalyticssupportPlugin' ) ) {
 
 		function register() {
 			add_filter( "plugin_action_links_$this->plugin", array( $this, 'settings_link' ) );
-            add_action( 'admin_menu', array( $this, 'add_admin_pages' ) );
-			
+      add_action( 'admin_menu', array( $this, 'add_admin_pages' ) );
           
 		}
-        
 
 		public function settings_link( $links ) {
 			$settings_link = '<a href="admin.php?page=ampanalyticssupport">Settings</a>';
 			array_push( $links, $settings_link );
 			return $links;
 		}
-        public function add_admin_pages() {
-            $page_title = 'AMP GA4 Support';
-            $menu_title = 'AMP GA4 Support';
-            $capability = 'manage_options';
-            $menu_slug  = 'ampanalyticssupport';
-            $function   = array( $this, 'admin_index' );
-            $icon_url   = 'dashicons-analytics';
-            $position   = 100;
-          
-            add_menu_page( $page_title,
-                           $menu_title,
-                           $capability,
-                           $menu_slug,
-                           $function,
-                           $icon_url,
-                           $position );
-		}
+
+    public function add_admin_pages() {
+      $page_title = 'AMP GA4 Support';
+      $menu_title = 'AMP GA4 Support';
+      $capability = 'manage_options';
+      $menu_slug  = 'ampanalyticssupport';
+      $function   = array( $this, 'admin_index' );
+      $icon_url   = 'dashicons-analytics';
+      $position   = 100;
+    
+      add_menu_page( $page_title,
+                      $menu_title,
+                      $capability,
+                      $menu_slug,
+                      $function,
+                      $icon_url,
+                      $position );
+    }
 
 		public function admin_index() {
 			require_once plugin_dir_path( __FILE__ ) . 'templates/admin.php';
@@ -71,7 +69,6 @@ if ( !class_exists( 'ampanalyticssupportPlugin' ) ) {
 			require_once plugin_dir_path( __FILE__ ) . 'inc/ampanalyticssupport-plugin-activate.php';
 			$ampanalyticssupportActivate = new ampanalyticssupportActivate();
 			$ampanalyticssupportActivate->activate();
-			
 		}
 
 	}
@@ -81,8 +78,8 @@ if ( !class_exists( 'ampanalyticssupportPlugin' ) ) {
    
 	// activation
 	register_activation_hook( __FILE__, array( $ampanalyticssupportPlugin, 'activate' ) );
+  register_setting( 'ampanalyticssupport-settings', 'ampanalyticssupport' );
 
-    register_setting( 'ampanalyticssupport-settings', 'ampanalyticssupport' );
 }
 
 function page_is_amp() {
@@ -118,7 +115,7 @@ function ampanalyticssupport() {
       } 
 }
 add_action('wp_footer', 'ampanalyticssupport');
-
+add_action('amp_post_template_footer', 'ampanalyticssupport');
 
 
 ?>

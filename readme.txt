@@ -1,6 +1,6 @@
 === AMP Google Analytics 4 Support ===
 Contributors: Roland Farkas
-Tags: ga4, google analytics 4, amp, ga4 amp, google analytics 4 amp support, ga4 amp support
+Tags: ga4, google analytics 4, amp, amp ga4 support
 Requires at least: 4.9
 Tested up to: 5.9
 Stable tag: 1.0.8
@@ -56,3 +56,5 @@ Simply deactivate and delete the plugin.
 * Updated Plugin Directory
 = 1.0.8 =
 * Removed / from Plugin Directory 
+= 1.0.9 =
+* Added Support for AMP Reader Mode
