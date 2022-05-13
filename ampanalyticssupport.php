@@ -3,7 +3,7 @@
 * Plugin Name: AMP Google Analytics 4 Support
 * Plugin URI: https://github.com/rolandfarkasCOM/ampanalyticssupport/
 * Description: Google Analytics 4 (GA4) AMP support plugin.
-* Version: 1.0.9
+* Version: 1.1.0
 * Author: Roland Farkas
 * Author URI: https://rolandfarkas.com
 * License GPLv3 or later
