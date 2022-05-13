@@ -3,6 +3,8 @@
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
 ![AMP](https://img.shields.io/badge/Amp-000?style=for-the-badge&logo=amp&logoColor=005AF0)
 
+[Download from WordPress](https://wordpress.org/plugins/amp-google-analytics-4-support/)
+
 ### About ###
 Google Analytics 4 (GA4) AMP support WordPress plugin.
 
