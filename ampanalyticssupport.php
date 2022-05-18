@@ -3,7 +3,7 @@
 * Plugin Name: AMP Google Analytics 4 Support
 * Plugin URI: https://github.com/rolandfarkasCOM/ampanalyticssupport/
 * Description: Google Analytics 4 (GA4) AMP support plugin.
-* Version: 1.1.0
+* Version: 1.1.1
 * Author: Roland Farkas
 * Author URI: https://rolandfarkas.com
 * License GPLv3 or later
@@ -79,7 +79,10 @@ if ( !class_exists( 'ampanalyticssupportPlugin' ) ) {
 	// activation
 	register_activation_hook( __FILE__, array( $ampanalyticssupportPlugin, 'activate' ) );
   register_setting( 'ampanalyticssupport-settings', 'ampanalyticssupport' );
-
+  register_setting( 'ampanalyticssupport-settings', 'ampanalyticssupport_pageview' );
+  register_setting( 'ampanalyticssupport-settings', 'ampanalyticssupport_consent' );
+  register_setting( 'ampanalyticssupport-settings', 'ampanalyticssupport_webvitals' );
+  register_setting( 'ampanalyticssupport-settings', 'ampanalyticssupport_performance' );
 }
 
 function page_is_amp() {
@@ -98,20 +101,27 @@ function ampanalyticssupport() {
     if ( is_plugin_active( 'amp/amp.php' ) && page_is_amp()) {
         //plugin is activated
 
-     echo '<amp-analytics type="googleanalytics" config="'.plugin_dir_url( __FILE__ ).'ga4.json" data-credentials="include">
-            <script type="application/json">
-            {
-                "vars": {
-                            "GA4_MEASUREMENT_ID": "'.get_option('ampanalyticssupport').'",
-                            "GA4_ENDPOINT_HOSTNAME": "www.google-analytics.com",
-                            "DEFAULT_PAGEVIEW_ENABLED": true,    
-                            "GOOGLE_CONSENT_ENABLED": false,
-                            "WEBVITALS_TRACKING": false,
-                            "PERFORMANCE_TIMING_TRACKING": false
-                }
-            }
-            </script>
-            </amp-analytics>';   
+     $ampanalyticssupport = '<amp-analytics type="googleanalytics" config="'.plugin_dir_url( __FILE__ ).'ga4.json" data-credentials="include"><script type="application/json">{"vars": {';
+
+     // Adding backwards compatibility to AMP Google Analytics 4 Support v1.1.0 
+    if(get_option('ampanalyticssupport_pageview') != "" && get_option('ampanalyticssupport_consent') != "" && get_option('ampanalyticssupport_webvitals') != "" && get_option('ampanalyticssupport_performance') != ""){ 
+          $ampanalyticssupport .= '"GA4_MEASUREMENT_ID": "'.get_option('ampanalyticssupport').'",
+          "GA4_ENDPOINT_HOSTNAME": "www.google-analytics.com",
+          "DEFAULT_PAGEVIEW_ENABLED": '.get_option('ampanalyticssupport_pageview').',    
+          "GOOGLE_CONSENT_ENABLED": '.get_option('ampanalyticssupport_consent').',
+          "WEBVITALS_TRACKING": '.get_option('ampanalyticssupport_webvitals').',
+          "PERFORMANCE_TIMING_TRACKING": '.get_option('ampanalyticssupport_performance').'}}</script></amp-analytics>';
+    }else{
+          $ampanalyticssupport .= '"GA4_MEASUREMENT_ID": "'.get_option('ampanalyticssupport').'",
+          "GA4_ENDPOINT_HOSTNAME": "www.google-analytics.com",
+          "DEFAULT_PAGEVIEW_ENABLED": true,    
+          "GOOGLE_CONSENT_ENABLED": false,
+          "WEBVITALS_TRACKING": false,
+          "PERFORMANCE_TIMING_TRACKING": false}}</script></amp-analytics>';
+                            }
+      
+  echo $ampanalyticssupport;
+
       } 
 }
 add_action('wp_footer', 'ampanalyticssupport');

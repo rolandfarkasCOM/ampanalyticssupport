@@ -3,7 +3,7 @@ Contributors: Roland Farkas
 Tags: ga4, google analytics 4, amp, amp ga4 support
 Requires at least: 4.9
 Tested up to: 5.9
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Requires PHP: 5.6
@@ -35,6 +35,8 @@ David Vallejo - https://github.com/thyngster - https://github.com/analytics-debu
 = How do I use this plugin? =
  
 Simply insert your GA4 MEASUREMENT ID in to the form on the settings page.
+
+UPDATE v1.1.1 - Added addittional options in the admin settings.
  
 = How to uninstall the plugin? =
  
@@ -58,3 +60,5 @@ Simply deactivate and delete the plugin.
 * Removed / from Plugin Directory 
 = 1.0.9 =
 * Added Support for AMP Reader Mode
+= 1.1.1 =
+* Added more options in the admin settings
