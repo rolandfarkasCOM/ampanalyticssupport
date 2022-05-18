@@ -1,5 +1,5 @@
 # Google Analytics 4 (GA4) AMP support WordPress plugin. #
-[![LICENSE](https://img.shields.io/github/license/polarizeltd/mcms-lite?logo=github&style=for-the-badge)](https://github.com/polarizeltd/mcms-lite/blob/master/LICENSE)
+[![LICENSE](https://img.shields.io/github/license/polarizeltd/mcms-lite?logo=github&style=for-the-badge)](https://github.com/rolandfarkasCOM/ampanalyticssupport/blob/main/LICENSE)
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
 ![AMP](https://img.shields.io/badge/Amp-000?style=for-the-badge&logo=amp&logoColor=005AF0)
 
