@@ -3,7 +3,7 @@ Contributors: Roland Farkas
 Tags: ga4, google analytics 4, amp, amp ga4 support
 Requires at least: 4.9
 Tested up to: 5.9
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Requires PHP: 5.6
@@ -62,3 +62,5 @@ Simply deactivate and delete the plugin.
 * Added Support for AMP Reader Mode
 = 1.1.1 =
 * Added more options in the admin settings
+= 1.1.2 =
+* Fix session calculator
