@@ -8,7 +8,7 @@
 
  // Admin Content
 ?>
-  <h1>AMP G4 Support</h1>
+  <h1>AMP Google Analytics 4 Support</h1>
   <form method="post" action="options.php">
     <?php settings_fields( 'ampanalyticssupport-settings' ); ?>
     <?php do_settings_sections( 'ampanalyticssupport-settings' ); ?>
