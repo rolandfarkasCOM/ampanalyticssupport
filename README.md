@@ -1,3 +1,12 @@
+# IMPORTANT #
+
+2023-06-27. Google Has officially announced AMP Support for GA4.
+
+https://support.google.com/analytics/answer/13707678
+
+https://twitter.com/googleanalytics/status/1673697311891812354
+
+
 # Google Analytics 4 (GA4) AMP support WordPress plugin. #
 [![LICENSE](https://img.shields.io/github/license/polarizeltd/mcms-lite?logo=github&style=for-the-badge)](https://github.com/rolandfarkasCOM/ampanalyticssupport/blob/main/LICENSE)
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
