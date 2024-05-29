@@ -2,8 +2,8 @@
 Contributors: Roland Farkas
 Tags: ga4, google analytics 4, amp, amp ga4 support
 Requires at least: 4.9
-Tested up to: 6.0
-Stable tag: 1.1.4
+Tested up to: 6.5.3
+Stable tag: 1.1.5
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Requires PHP: 5.6
